@@ -59,7 +59,6 @@ class waitingUser(HttpUser):
 
 
     "대기 상태 확인 - 대기/입장 여부"
-    @task
     def check_status(self):
         while True:
             # 상태 조회 URL 호출
