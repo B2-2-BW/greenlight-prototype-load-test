@@ -9,7 +9,7 @@ class waitingUser(HttpUser):
 
     "이벤트 정보 조회 - 이벤트 조회만 admin api라 url다름"
     def on_start(self):
-        event_name = "test" #이벤트명은 test로 고정Wltn
+        event_name = "test" #이벤트명은 test로 고정
 
         # 이벤트 조회 GET 요청 보내기
         with self.client.get(f"/events/{event_name}", catch_response=True) as response:
