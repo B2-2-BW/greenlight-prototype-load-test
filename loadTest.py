@@ -9,7 +9,7 @@ class waitingUser(HttpUser):
 
     "이벤트 정보 조회 - 이벤트 조회만 admin api라 url다름"
     def on_start(self):
-        event_name = "test" #이벤트명은 test로 고정
+        event_name = "test" #이벤트명은 test로 고정Wltn
 
         # 이벤트 조회 GET 요청 보내기
         with self.client.get(f"/events/{event_name}", catch_response=True) as response:
@@ -59,7 +59,6 @@ class waitingUser(HttpUser):
 
 
     "대기 상태 확인 - 대기/입장 여부"
-    @task
     def check_status(self):
         while True:
             # 상태 조회 URL 호출
